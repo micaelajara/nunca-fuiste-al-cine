@@ -28,7 +28,7 @@
 
   <section class="hero">
     <img class="hero-logo" src="img/logo.jpg" alt="Nunca Fuiste al Cine — Cuarta temporada" />
-    <p class="hero-schedule">
+    <p class="hero-schedule" data-testid="hero-schedule">
       <span class="dot"></span>
       Sábados de 14 a 16hs · FM La Tribu · también en Spotify y YouTube
     </p>
@@ -93,17 +93,17 @@
     <h2>Escuchanos</h2>
     <p class="section-sub">En vivo o cuando quieras, como prefieras.</p>
     <div class="listen-grid">
-      <a href="#" class="listen-card">
+      <a href="https://fmlatribu.com/" target="_blank" rel="noopener" class="listen-card">
         <span class="listen-label">En vivo</span>
         <span class="listen-name">FM La Tribu</span>
         <span class="listen-detail">Sábados 14 a 16hs</span>
       </a>
-      <a href="#" class="listen-card">
+      <a href="https://open.spotify.com/show/7GVR3qZjFmv0jUiz4pH39w?si=8077fd78c5f7477f" target="_blank" rel="noopener" class="listen-card">
         <span class="listen-label">Podcast</span>
         <span class="listen-name">Spotify</span>
         <span class="listen-detail">Todos los episodios</span>
       </a>
-      <a href="#" class="listen-card">
+      <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener" class="listen-card">
         <span class="listen-label">Podcast</span>
         <span class="listen-name">YouTube</span>
         <span class="listen-detail">Todos los episodios</span>
@@ -120,10 +120,6 @@
 
     <div class="plans">
       <a href="#" class="plan">
-        <span class="plan-amount">$3.000</span>
-        <span class="plan-period">por mes</span>
-      </a>
-      <a href="#" class="plan">
         <span class="plan-amount">$5.000</span>
         <span class="plan-period">por mes</span>
       </a>
@@ -135,11 +131,28 @@
         <span class="plan-amount">$12.000</span>
         <span class="plan-period">por mes</span>
       </a>
+      <a href="#" class="plan">
+        <span class="plan-amount">$20.000</span>
+        <span class="plan-period">por mes</span>
+      </a>
+      <div class="plan plan-custom">
+        <label for="customMonthly" class="plan-custom-label">Otro monto</label>
+        <div class="plan-custom-input">
+          <span>$</span>
+          <input type="number" id="customMonthly" min="1000" step="500" placeholder="7.500" />
+        </div>
+        <a href="#" class="plan-custom-btn">Aportar por mes</a>
+      </div>
     </div>
 
-    <p class="one-time">
-      ¿Preferís aportar <strong>por única vez</strong>? <a href="#">Hacé click acá</a>
-    </p>
+    <div class="one-time">
+      <p class="one-time-label">¿Preferís aportar <strong>por única vez</strong>?</p>
+      <div class="one-time-input">
+        <span>$</span>
+        <input type="number" id="customOneTime" min="1000" step="500" placeholder="10.000" />
+        <a href="#" class="one-time-btn">Aportar</a>
+      </div>
+    </div>
     <p class="payment-note">Pagos a través de MercadoPago.</p>
 
     <p class="abroad">¿Estás afuera? <a href="#" class="paypal-link">Pagá en PayPal</a></p>
