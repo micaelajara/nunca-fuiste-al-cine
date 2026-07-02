@@ -280,6 +280,57 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.9rem;
 }
 
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  max-width: 500px;
+}
+
+.merch-item {
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.merch-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--yellow);
+}
+
+.merch-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.merch-status {
+  background: var(--border);
+  color: var(--ink-dim);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+
+.merch-cta {
+  margin-top: 1.75rem;
+  color: var(--ink-dim);
+}
+.merch-cta a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .subscribe { text-align: center; }
 .subscribe .section-sub { margin-left: auto; margin-right: auto; }
 
