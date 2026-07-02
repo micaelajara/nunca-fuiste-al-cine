@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Nunca Fuiste al Cine — Cuarta temporada</title>
 <meta name="description" content="Nunca Fuiste al Cine, programa de radio sobre cine. Sábados de 14 a 16hs por FM La Tribu. Escuchalo también en Spotify y YouTube." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nunca Fuiste al Cine — Cuarta temporada" />
+<meta property="og:description" content="Programa de radio sobre cine: estrenos, clásicos y charlas sin filtro. Sábados de 14 a 16hs por FM La Tribu, también en Spotify y YouTube." />
+<meta property="og:image" content="https://micaelajara.github.io/nunca-fuiste-al-cine/img/logo.jpg" />
+<meta property="og:url" content="https://micaelajara.github.io/nunca-fuiste-al-cine/" />
+<meta property="og:locale" content="es_AR" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Nunca Fuiste al Cine — Cuarta temporada" />
+<meta name="twitter:description" content="Programa de radio sobre cine: estrenos, clásicos y charlas sin filtro. Sábados de 14 a 16hs por FM La Tribu." />
+<meta name="twitter:image" content="https://micaelajara.github.io/nunca-fuiste-al-cine/img/logo.jpg" />
+
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
@@ -19,6 +34,9 @@
     <a href="#programa">El programa</a>
     <a href="#equipo">Equipo</a>
     <a href="#escuchanos">Escuchanos</a>
+    <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram de Nunca Fuiste al Cine">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
     <a href="#suscribite" class="cta-small">Suscribite</a>
   </nav>
   <button class="nav-toggle" aria-label="Abrir menú" id="navToggle">☰</button>
@@ -27,11 +45,13 @@
 <main id="top">
 
   <section class="hero">
-    <img class="hero-logo" src="img/logo.jpg" alt="Nunca Fuiste al Cine — Cuarta temporada" />
+    <img class="hero-cover" src="img/logo.jpg" alt="" />
     <p class="hero-schedule" data-testid="hero-schedule">
       <span class="dot"></span>
-      Sábados de 14 a 16hs · FM La Tribu · también en Spotify y YouTube
+      Sábados de 14 a 16hs · FM La Tribu
     </p>
+    <h1 class="hero-title">Nunca Fuiste al <span class="accent">Cine</span></h1>
+    <p class="hero-subtitle">Cuarta temporada · también en Spotify y YouTube</p>
     <div class="hero-actions">
       <a href="#suscribite" class="btn btn-primary">Sumate al programa</a>
       <a href="#escuchanos" class="btn btn-ghost">Escuchanos</a>
@@ -51,6 +71,23 @@
       Si te gusta lo que hacemos y querés que sigamos creciendo, más abajo te contamos
       cómo bancarnos.
     </p>
+  </section>
+
+  <section id="episodio" class="section">
+    <h2>Último episodio</h2>
+    <p class="section-sub">Así sonó el programa más reciente.</p>
+    <div class="episode-embed">
+      <iframe
+        src="https://open.spotify.com/embed/episode/2BEJBxvX3bcYXTuf6qv8Gf?utm_source=generator"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="Reproductor de Spotify — último episodio de Nunca Fuiste al Cine">
+      </iframe>
+    </div>
   </section>
 
   <section id="equipo" class="section alt">
@@ -158,11 +195,38 @@
     <p class="abroad">¿Estás afuera? <a href="#" class="paypal-link">Pagá en PayPal</a></p>
   </section>
 
+  <section id="faq" class="section">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Puedo cancelar cuando quiera?</summary>
+        <p>Sí. Es un aporte mensual libre, sin compromiso ni permanencia mínima. Lo das de baja cuando quieras.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué recibo a cambio de suscribirme?</summary>
+        <p>Nada material: es un aporte solidario para que Nunca Fuiste al Cine pueda seguir grabándose cada semana, de forma independiente.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo aportar una sola vez en vez de suscribirme?</summary>
+        <p>Sí. Además de los planes mensuales, tenés la opción de hacer un aporte único por el monto que prefieras.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se procesan los pagos?</summary>
+        <p>A través de MercadoPago. Si estás fuera de Argentina, podés aportar por PayPal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo elegir un monto distinto a los planes fijos?</summary>
+        <p>Sí, tanto en el aporte mensual como en el único podés poner el monto que quieras.</p>
+      </details>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <img src="img/logo.jpg" alt="Nunca Fuiste al Cine" class="footer-logo" />
   <p>Nunca Fuiste al Cine — FM La Tribu, sábados de 14 a 16hs. © 2026</p>
+  <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener" class="footer-social">Seguinos en Instagram</a>
 </footer>
 
 <script>
