@@ -45,7 +45,6 @@
     <a href="mailto:nuncafuistealcine@gmail.com" class="cta-small cta-outline">Contactanos</a>
     <a href="index.html#suscribite" class="cta-small">Suscribite</a>
   </nav>
-  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu" id="navToggle">☰</button>
 </header>
 
 <main id="top">
@@ -70,11 +69,11 @@
         <span class="column-title">La zona paraxial</span>
         <span class="column-author">Alex Leibovich</span>
       </a>
-      <div class="column-item column-item-pending">
+      <a class="column-item" href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener">
+        <img class="column-flyer" src="img/columnas/premisas.jpg" alt="" />
         <span class="column-title">Premisas Falsas</span>
-        <span class="column-author">Santi Kahn</span>
-        <span class="column-pending-note">Flyer próximamente</span>
-      </div>
+        <span class="column-author">Santiago Kahn</span>
+      </a>
       <a class="column-item" href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener">
         <img class="column-flyer" src="img/columnas/transfilosa.jpg" alt="" />
         <span class="column-title">Las obsesiones de la Transfilosa</span>
@@ -85,14 +84,23 @@
         <span class="column-title">Pasión de los fuertes</span>
         <span class="column-author">Ale Tevez</span>
       </a>
+      <a class="column-item" href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener">
+        <img class="column-flyer" src="img/columnas/pelicula.jpg" alt="" />
+        <span class="column-title">Un mundo de película</span>
+        <span class="column-author">Agus Ranzini</span>
+      </a>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <img class="footer-illustration footer-illustration-right" src="img/footer/cienaga.png" alt="" />
-  <img class="footer-illustration footer-illustration-left" src="img/footer/silvia-prieto.png" alt="" />
+  <div class="footer-illustrations">
+    <img class="footer-illustration" src="img/footer/cienaga.png" alt="" />
+    <img class="footer-illustration" src="img/footer/silvia-prieto.png" alt="" />
+    <img class="footer-illustration" src="img/footer/cuando-acecha.png" alt="" />
+    <img class="footer-illustration" src="img/footer/esperando.png" alt="" />
+  </div>
   <div class="footer-content">
     <ul class="footer-social-list">
       <li>
@@ -130,24 +138,6 @@
 </button>
 
 <script>
-  var navToggle = document.getElementById('navToggle');
-  var navMenu = document.getElementById('navMenu');
-
-  navToggle.addEventListener('click', function () {
-    var isOpen = navMenu.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-    navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Abrir menú');
-      navToggle.focus();
-    }
-  });
-
   var escuchanosDropdown = document.getElementById('escuchanosDropdown');
   var escuchanosTrigger = document.getElementById('escuchanosTrigger');
 
@@ -186,9 +176,28 @@
   }
 
   var scrollTopBtn = document.getElementById('scrollTopBtn');
-  window.addEventListener('scroll', function () {
+  var siteFooter = document.querySelector('.footer');
+
+  function updateScrollTopBtn() {
     scrollTopBtn.classList.toggle('is-visible', window.scrollY > 500);
-  });
+    var footerRect = siteFooter.getBoundingClientRect();
+    var baseBottom = window.innerWidth <= 720 ? 72 : 24;
+    var reservedSpace = scrollTopBtn.offsetHeight + baseBottom + 12;
+    if (footerRect.top < window.innerHeight - reservedSpace) {
+      scrollTopBtn.style.position = 'absolute';
+      scrollTopBtn.style.bottom = 'auto';
+      scrollTopBtn.style.top = (siteFooter.offsetTop - scrollTopBtn.offsetHeight - 16) + 'px';
+    } else {
+      scrollTopBtn.style.position = '';
+      scrollTopBtn.style.bottom = '';
+      scrollTopBtn.style.top = '';
+    }
+  }
+
+  window.addEventListener('scroll', updateScrollTopBtn);
+  window.addEventListener('resize', updateScrollTopBtn);
+  updateScrollTopBtn();
+
   scrollTopBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
