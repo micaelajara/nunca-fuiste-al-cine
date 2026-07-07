@@ -9,16 +9,17 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Nunca Fuiste al Cine — Cuarta temporada" />
 <meta property="og:description" content="Programa de radio sobre cine: estrenos, clásicos y charlas sin filtro. Sábados de 14 a 16hs por FM La Tribu, también en Spotify y YouTube." />
-<meta property="og:image" content="https://micaelajara.github.io/nunca-fuiste-al-cine/img/logo.jpg" />
+<meta property="og:image" content="https://micaelajara.github.io/nunca-fuiste-al-cine/img/logo.png" />
 <meta property="og:url" content="https://micaelajara.github.io/nunca-fuiste-al-cine/" />
 <meta property="og:locale" content="es_AR" />
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Nunca Fuiste al Cine — Cuarta temporada" />
 <meta name="twitter:description" content="Programa de radio sobre cine: estrenos, clásicos y charlas sin filtro. Sábados de 14 a 16hs por FM La Tribu." />
-<meta name="twitter:image" content="https://micaelajara.github.io/nunca-fuiste-al-cine/img/logo.jpg" />
+<meta name="twitter:image" content="https://micaelajara.github.io/nunca-fuiste-al-cine/img/logo.png" />
 
-<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="canonical" href="https://micaelajara.github.io/nunca-fuiste-al-cine/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
@@ -26,59 +27,79 @@
 </head>
 <body>
 
+<a href="#top" class="skip-link">Saltar al contenido</a>
+
 <header class="nav">
-  <a href="#top" class="logo-small">
-    <img src="img/logo.jpg" alt="Nunca Fuiste al Cine" />
-  </a>
-  <nav>
-    <a href="#programa">El programa</a>
-    <a href="#equipo">Equipo</a>
-    <a href="#escuchanos">Escuchanos</a>
-    <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram de Nunca Fuiste al Cine">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-    </a>
+  <nav id="navMenu">
+    <div class="nav-dropdown" id="escuchanosDropdown">
+      <button class="nav-dropdown-trigger" type="button" aria-expanded="false" aria-controls="escuchanosMenu" id="escuchanosTrigger">
+        Escuchanos
+        <svg class="nav-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="nav-dropdown-menu" id="escuchanosMenu">
+        <a href="https://fmlatribu.com/" target="_blank" rel="noopener">FM La Tribu</a>
+        <a href="https://open.spotify.com/show/7GVR3qZjFmv0jUiz4pH39w?si=8077fd78c5f7477f" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <a href="mailto:nuncafuistealcine@gmail.com" class="cta-small cta-outline">Contactanos</a>
     <a href="#suscribite" class="cta-small">Suscribite</a>
   </nav>
-  <button class="nav-toggle" aria-label="Abrir menú" id="navToggle">☰</button>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu" id="navToggle">☰</button>
 </header>
 
 <main id="top">
 
   <section class="hero">
-    <img class="hero-cover" src="img/logo.jpg" alt="" />
-    <p class="hero-schedule" data-testid="hero-schedule">
-      <span class="dot"></span>
-      Sábados de 14 a 16hs · FM La Tribu
-    </p>
-    <h1 class="hero-title">Nunca Fuiste al <span class="accent">Cine</span></h1>
-    <p class="hero-subtitle">Cuarta temporada · también en Spotify y YouTube</p>
-    <div class="hero-actions">
-      <a href="#suscribite" class="btn btn-primary">Sumate al programa</a>
-      <a href="#escuchanos" class="btn btn-ghost">Escuchanos</a>
+    <img class="hero-title-image" src="img/hero/titulo.jpg" alt="Nunca Fuiste al Cine" />
+    <h1 class="sr-only">Nunca Fuiste al Cine</h1>
+    <div class="hero-content">
+      <p class="hero-schedule" data-testid="hero-schedule">
+        <span class="dot"></span>
+        Sábados de 14 a 16hs · FM La Tribu
+      </p>
+      <p class="hero-subtitle">Cuarta temporada · también en Spotify y YouTube</p>
+      <p class="hero-description">
+        <strong>Nunca Fuiste al Cine</strong> es un programa de radio sobre cine: estrenos,
+        clásicos, discusiones sin filtro y alguna que otra pelea sana sobre qué películas
+        valen la pena. Vamos por la <strong>cuarta temporada</strong>, todos los sábados de
+        14 a 16hs por FM La Tribu, y después queda disponible en Spotify y YouTube para
+        quien se lo haya perdido.
+      </p>
+      <div class="hero-actions">
+        <a href="#suscribite" class="btn btn-primary">Sumate al programa</a>
+        <a href="#episodio" class="btn btn-ghost">Escuchanos</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://open.spotify.com/show/7GVR3qZjFmv0jUiz4pH39w?si=8077fd78c5f7477f" target="_blank" rel="noopener" class="hero-social hero-social-spotify" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          <span>Spotify</span>
+        </a>
+        <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener" class="hero-social hero-social-youtube" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener" class="hero-social hero-social-instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-subnav">
+      <span class="hero-subnav-brand">Nunca Fuiste al Cine</span>
+      <nav class="hero-subnav-links">
+        <a href="#top">Inicio</a>
+        <a href="#suscribite">Aportes</a>
+      </nav>
     </div>
   </section>
 
-  <section id="programa" class="section">
-    <h2>El programa</h2>
-    <p class="lead">
-      <strong>Nunca Fuiste al Cine</strong> es un programa de radio sobre cine: estrenos,
-      clásicos, discusiones sin filtro y alguna que otra pelea sana sobre qué películas
-      valen la pena. Vamos por la <strong>cuarta temporada</strong>, todos los sábados de
-      14 a 16hs por FM La Tribu, y después queda disponible en Spotify y YouTube para
-      quien se lo haya perdido.
-    </p>
-    <p class="lead">
-      Si te gusta lo que hacemos y querés que sigamos creciendo, más abajo te contamos
-      cómo bancarnos.
-    </p>
-  </section>
-
   <section id="episodio" class="section">
-    <h2>Último episodio</h2>
-    <p class="section-sub">Así sonó el programa más reciente.</p>
+    <h2>Dónde nos encontrás</h2>
+    <p class="section-sub">Así sonó el programa más reciente. Escuchanos en vivo o en plataformas on demand.</p>
     <div class="episode-embed">
       <iframe
-        src="https://open.spotify.com/embed/episode/2BEJBxvX3bcYXTuf6qv8Gf?utm_source=generator"
+        src="https://open.spotify.com/embed/episode/6m1P8HwCmhNImXrUhqztth?utm_source=generator"
         width="100%"
         height="152"
         frameborder="0"
@@ -88,116 +109,17 @@
         title="Reproductor de Spotify — último episodio de Nunca Fuiste al Cine">
       </iframe>
     </div>
-  </section>
-
-  <section id="equipo" class="section">
-    <h2>Equipo</h2>
-    <p class="section-sub">Somos siete atrás de cada programa.</p>
-
-    <div class="team-list">
-      <div class="team-row">
-        <span class="team-role">Conducción</span>
-        <span class="team-names">Rodrigo Ferreiro, Paula Ferreiro, Blas Martín</span>
-      </div>
-      <div class="team-row">
-        <span class="team-role">Columnistas</span>
-        <span class="team-names">Agustina Ranzini, Santiago Kahn</span>
-      </div>
-      <div class="team-row">
-        <span class="team-role">Producción</span>
-        <span class="team-names">Rosaura Barletta, Micaela Jara</span>
-      </div>
-      <div class="team-row">
-        <span class="team-role">Operación técnica</span>
-        <span class="team-names">Juaneco</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="columnas" class="section">
-    <h2>Columnas</h2>
-    <p class="section-sub">Los segmentos fijos de cada programa.</p>
-    <div class="columns-grid">
-      <div class="column-item">
-        <span class="column-title">Cine y literatura</span>
-        <span class="column-author">Lau Forni</span>
-      </div>
-      <div class="column-item">
-        <span class="column-title">Rockumentales</span>
-        <span class="column-author">Gonza Penas</span>
-      </div>
-      <div class="column-item">
-        <span class="column-title">La zona paraxial</span>
-        <span class="column-author">Alex Leibovich</span>
-      </div>
-      <div class="column-item">
-        <span class="column-title">Premisas Falsas</span>
-        <span class="column-author">Santi Kahn</span>
-      </div>
-      <div class="column-item">
-        <span class="column-title">Las obsesiones de la Transfilosa</span>
-        <span class="column-author">La Transfilosa</span>
-      </div>
-      <div class="column-item">
-        <span class="column-title">Pasión de los fuertes</span>
-        <span class="column-author">Ale Tevez</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="escuchanos" class="section">
-    <h2>Escuchanos</h2>
-    <p class="section-sub">En vivo o cuando quieras, como prefieras.</p>
-    <div class="listen-row">
-      <a href="https://fmlatribu.com/" target="_blank" rel="noopener" class="listen-card">
-        <span class="listen-badge" style="color:#111">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 20 4v16L4 12.5"/><circle cx="6" cy="16" r="2.5"/><path d="M9 15.5 12 21"/></svg>
-        </span>
-        <span class="listen-text">
-          <span class="listen-label">En vivo</span>
-          <span class="listen-name">FM La Tribu</span>
-          <span class="listen-detail">Sábados 14 a 16hs</span>
-        </span>
+    <div class="listen-icons">
+      <a href="https://fmlatribu.com/" target="_blank" rel="noopener" class="listen-icon-btn listen-icon-radio" aria-label="FM La Tribu, en vivo, sábados de 14 a 16hs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 20 4v16L4 12.5"/><circle cx="6" cy="16" r="2.5"/><path d="M9 15.5 12 21"/></svg>
       </a>
-      <a href="https://open.spotify.com/show/7GVR3qZjFmv0jUiz4pH39w?si=8077fd78c5f7477f" target="_blank" rel="noopener" class="listen-card">
-        <span class="listen-badge" style="color:#1DB954">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-        </span>
-        <span class="listen-text">
-          <span class="listen-label">Podcast</span>
-          <span class="listen-name">Spotify</span>
-          <span class="listen-detail">Todos los episodios</span>
-        </span>
+      <a href="https://open.spotify.com/show/7GVR3qZjFmv0jUiz4pH39w?si=8077fd78c5f7477f" target="_blank" rel="noopener" class="listen-icon-btn listen-icon-spotify" aria-label="Spotify, todos los episodios">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
       </a>
-      <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener" class="listen-card">
-        <span class="listen-badge" style="color:#FF0000">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </span>
-        <span class="listen-text">
-          <span class="listen-label">Podcast</span>
-          <span class="listen-name">YouTube</span>
-          <span class="listen-detail">Todos los episodios</span>
-        </span>
+      <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener" class="listen-icon-btn listen-icon-youtube" aria-label="YouTube, todos los episodios">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       </a>
     </div>
-  </section>
-
-  <section id="merch" class="section">
-    <h2>Merch</h2>
-    <p class="section-sub">Estamos preparando algo para bancarnos usándolo puesto.</p>
-    <div class="merch-grid">
-      <div class="merch-item">
-        <svg class="merch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 8 H18 L17 21 H7 L6 8 Z"/><path d="M9 8 V6 a3 3 0 0 1 6 0 v2"/></svg>
-        <span class="merch-name">Tote bag</span>
-        <span class="merch-status">Muy pronto</span>
-      </div>
-      <div class="merch-item">
-        <svg class="merch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 4 L4 7 L6 10 L8 8.5 V20 H16 V8.5 L18 10 L20 7 L15 4 H9 Z"/></svg>
-        <span class="merch-name">Remera</span>
-        <span class="merch-status">Muy pronto</span>
-      </div>
-    </div>
-    <p class="merch-cta">Seguinos en <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener">Instagram</a> para enterarte primero.</p>
   </section>
 
   <section id="suscribite" class="section subscribe">
@@ -207,29 +129,29 @@
       hacé un aporte único, lo que te quede más cómodo.
     </p>
 
-    <div class="plans">
-      <a href="#" class="plan plan-espectador">
-        <span class="plan-tier">Espectador</span>
-        <span class="plan-amount">$5.000</span>
-        <span class="plan-period">por mes</span>
+    <div class="plans plans-monthly">
+      <a href="#" class="plan-card plan-card-espectador">
+        <span class="plan-card-tag">Espectador</span>
+        <span class="plan-card-amount">$5.000</span>
+        <span class="plan-card-period">por mes</span>
       </a>
-      <a href="#" class="plan plan-cinefilo">
-        <span class="plan-tier">Cinéfilo</span>
-        <span class="plan-amount">$8.000</span>
-        <span class="plan-period">por mes</span>
+      <a href="#" class="plan-card plan-card-cinefilo">
+        <span class="plan-card-tag">Cinéfilo</span>
+        <span class="plan-card-amount">$8.000</span>
+        <span class="plan-card-period">por mes</span>
       </a>
-      <a href="#" class="plan plan-critico">
-        <span class="plan-tier">Crítico de Cine</span>
-        <span class="plan-amount">$12.000</span>
-        <span class="plan-period">por mes</span>
+      <a href="#" class="plan-card plan-card-critico">
+        <span class="plan-card-tag">Crítico de Cine</span>
+        <span class="plan-card-amount">$12.000</span>
+        <span class="plan-card-period">por mes</span>
       </a>
-      <a href="#" class="plan plan-director">
-        <span class="plan-tier">Director de Cine</span>
-        <span class="plan-amount">$20.000</span>
-        <span class="plan-period">por mes</span>
+      <a href="#" class="plan-card plan-card-director">
+        <span class="plan-card-tag">Director de Cine</span>
+        <span class="plan-card-amount">$20.000</span>
+        <span class="plan-card-period">por mes</span>
       </a>
-      <div class="plan plan-custom">
-        <label for="customMonthly" class="plan-custom-label">Otro monto</label>
+      <div class="plan-card plan-card-custom">
+        <label for="customMonthly" class="plan-card-tag">Otro monto</label>
         <div class="plan-custom-input">
           <span>$</span>
           <input type="number" id="customMonthly" min="1000" step="500" placeholder="7.500" />
@@ -240,54 +162,196 @@
 
     <div class="one-time">
       <p class="one-time-label">¿Preferís aportar <strong>por única vez</strong>?</p>
-      <div class="one-time-input">
-        <span>$</span>
-        <input type="number" id="customOneTime" min="1000" step="500" placeholder="10.000" />
-        <a href="#" class="one-time-btn">Aportar</a>
+      <div class="plans plans-onetime">
+        <a href="#" class="plan-card plan-card-onetime">
+          <span class="plan-card-tag">Única vez</span>
+          <span class="plan-card-amount">$10.000</span>
+        </a>
+        <div class="plan-card plan-card-custom">
+          <label for="customOneTime" class="plan-card-tag">Otro monto</label>
+          <div class="plan-custom-input">
+            <span>$</span>
+            <input type="number" id="customOneTime" min="1000" step="500" placeholder="7.500" />
+          </div>
+          <a href="#" class="plan-custom-btn">Aportar</a>
+        </div>
       </div>
     </div>
-    <p class="payment-note">Pagos a través de MercadoPago.</p>
+    <div class="payment-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      <span>Pagos a través de MercadoPago</span>
+    </div>
 
     <p class="abroad">¿Estás afuera? <a href="#" class="paypal-link">Pagá en PayPal</a></p>
   </section>
 
-  <section id="faq" class="section">
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>¿Puedo cancelar cuando quiera?</summary>
-        <p>Sí. Es un aporte mensual libre, sin compromiso ni permanencia mínima. Lo das de baja cuando quieras.</p>
-      </details>
-      <details class="faq-item">
-        <summary>¿Qué recibo a cambio de suscribirme?</summary>
-        <p>Nada material: es un aporte solidario para que Nunca Fuiste al Cine pueda seguir grabándose cada semana, de forma independiente.</p>
-      </details>
-      <details class="faq-item">
-        <summary>¿Puedo aportar una sola vez en vez de suscribirme?</summary>
-        <p>Sí. Además de los planes mensuales, tenés la opción de hacer un aporte único por el monto que prefieras.</p>
-      </details>
-      <details class="faq-item">
-        <summary>¿Cómo se procesan los pagos?</summary>
-        <p>A través de MercadoPago. Si estás fuera de Argentina, podés aportar por PayPal.</p>
-      </details>
-      <details class="faq-item">
-        <summary>¿Puedo elegir un monto distinto a los planes fijos?</summary>
-        <p>Sí, tanto en el aporte mensual como en el único podés poner el monto que quieras.</p>
-      </details>
+  <section id="newsletter" class="section">
+    <h2>Newsletter</h2>
+    <p class="section-sub">Centro de operaciones internéticas de NFC: lo que no entra en el programa, directo a tu mail.</p>
+    <a href="https://nuncafuistealcine.substack.com/" target="_blank" rel="noopener" class="btn btn-primary">Suscribirme por Substack</a>
+  </section>
+
+  <section id="equipo" class="section">
+    <h2>Equipo</h2>
+    <p class="section-sub">Somos ocho atrás de cada programa.</p>
+
+    <div class="team-grid">
+      <a class="team-card" href="equipo-rodrigo.html">
+        <span class="team-photo-placeholder"></span>
+        <span class="team-name">Rodrigo Ferreiro</span>
+        <span class="team-tag">Conducción</span>
+      </a>
+      <a class="team-card" href="equipo-paula.html">
+        <span class="team-photo-placeholder"></span>
+        <span class="team-name">Paula Ferreiro</span>
+        <span class="team-tag">Conducción</span>
+      </a>
+      <a class="team-card" href="equipo-blas.html">
+        <img class="team-photo" src="img/equipo/blas.jpg" alt="Blas Martín en el estudio" />
+        <span class="team-name">Blas Martín</span>
+        <span class="team-tag">Conducción</span>
+      </a>
+      <a class="team-card" href="equipo-agustina.html">
+        <img class="team-photo" src="img/equipo/agustina.jpg" alt="Agustina Ranzini" />
+        <span class="team-name">Agustina Ranzini</span>
+        <span class="team-tag">Columnista</span>
+      </a>
+      <a class="team-card" href="equipo-santiago.html">
+        <img class="team-photo" src="img/equipo/santi.jpg" alt="Santiago Kahn" />
+        <span class="team-name">Santiago Kahn</span>
+        <span class="team-tag">Columnista</span>
+      </a>
+      <a class="team-card" href="equipo-rosaura.html">
+        <img class="team-photo" src="img/equipo/rosaura.jpg" alt="Rosaura Barletta" />
+        <span class="team-name">Rosaura Barletta</span>
+        <span class="team-tag">Producción</span>
+      </a>
+      <a class="team-card" href="equipo-micaela.html">
+        <img class="team-photo" src="img/equipo/mica.jpg" alt="Micaela Jara" />
+        <span class="team-name">Micaela Jara</span>
+        <span class="team-tag">Producción</span>
+      </a>
+      <a class="team-card" href="equipo-juaneco.html">
+        <span class="team-photo-placeholder"></span>
+        <span class="team-name">Juaneco</span>
+        <span class="team-tag">Operación técnica</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="mas" class="section">
+    <h2>¿Querés saber más?</h2>
+    <p class="section-sub">Columnas, merch y preguntas frecuentes ahora tienen su propia página.</p>
+    <div class="more-links">
+      <a href="columnas.html" class="btn btn-ghost">Ver columnas</a>
+      <a href="merch.html" class="btn btn-ghost">Ver merch</a>
+      <a href="preguntas-frecuentes.html" class="btn btn-ghost">Preguntas frecuentes</a>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <img src="img/logo.jpg" alt="Nunca Fuiste al Cine" class="footer-logo" />
-  <p>Nunca Fuiste al Cine — FM La Tribu, sábados de 14 a 16hs. © 2026</p>
-  <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener" class="footer-social">Seguinos en Instagram</a>
+  <img class="footer-illustration footer-illustration-right" src="img/footer/cienaga.png" alt="" />
+  <img class="footer-illustration footer-illustration-left" src="img/footer/silvia-prieto.png" alt="" />
+  <div class="footer-content">
+    <ul class="footer-social-list">
+      <li>
+        <a href="https://www.instagram.com/nuncafuistecine/" target="_blank" rel="noopener" class="footer-social-btn footer-social-instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/show/7GVR3qZjFmv0jUiz4pH39w?si=8077fd78c5f7477f" target="_blank" rel="noopener" class="footer-social-btn footer-social-spotify" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener" class="footer-social-btn footer-social-youtube" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/nuncafuistecine" target="_blank" rel="noopener" class="footer-social-btn footer-social-twitter" aria-label="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.tiktok.com/@nuncafuistecine" target="_blank" rel="noopener" class="footer-social-btn footer-social-tiktok" aria-label="TikTok">
+          <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+        </a>
+      </li>
+    </ul>
+    <p class="footer-text">Nunca Fuiste al Cine — FM La Tribu, sábados de 14 a 16hs. © 2026</p>
+  </div>
 </footer>
 
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
 <script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    document.querySelector('.nav nav').classList.toggle('open');
+  var navToggle = document.getElementById('navToggle');
+  var navMenu = document.getElementById('navMenu');
+
+  navToggle.addEventListener('click', function () {
+    var isOpen = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Abrir menú');
+      navToggle.focus();
+    }
+  });
+
+  var escuchanosDropdown = document.getElementById('escuchanosDropdown');
+  var escuchanosTrigger = document.getElementById('escuchanosTrigger');
+
+  escuchanosTrigger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var isOpen = escuchanosDropdown.classList.toggle('open');
+    escuchanosTrigger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!escuchanosDropdown.contains(e.target)) {
+      escuchanosDropdown.classList.remove('open');
+      escuchanosTrigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      escuchanosDropdown.classList.remove('open');
+      escuchanosTrigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  var revealTargets = document.querySelectorAll('.section');
+  if ('IntersectionObserver' in window) {
+    revealTargets.forEach(function (el) { el.classList.add('reveal'); });
+    var revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealTargets.forEach(function (el) { revealObserver.observe(el); });
+  }
+
+  var scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', function () {
+    scrollTopBtn.classList.toggle('is-visible', window.scrollY > 500);
+  });
+  scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 

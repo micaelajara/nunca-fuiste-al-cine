@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://micaelajara.github.io/nunca-fuiste-al-cine/sitemap.xml
