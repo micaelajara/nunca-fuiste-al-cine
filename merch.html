@@ -109,6 +109,19 @@
   </div>
 </footer>
 
+<div class="quick-menu" id="quickMenu">
+  <div class="quick-menu-list" id="quickMenuList">
+    <a href="index.html#equipo">Equipo</a>
+    <a href="columnas.html">Columnas</a>
+    <a href="entrevistas.html">Archivo de entrevistas</a>
+    <a href="merch.html">Merch</a>
+    <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+  </div>
+  <button class="quick-menu-trigger" id="quickMenuTrigger" type="button" aria-expanded="false" aria-controls="quickMenuList" aria-label="Accesos rápidos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+  </button>
+</div>
+
 <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
 </button>
@@ -134,6 +147,29 @@
     if (e.key === 'Escape') {
       escuchanosDropdown.classList.remove('open');
       escuchanosTrigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  var quickMenu = document.getElementById('quickMenu');
+  var quickMenuTrigger = document.getElementById('quickMenuTrigger');
+
+  quickMenuTrigger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var isOpen = quickMenu.classList.toggle('open');
+    quickMenuTrigger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!quickMenu.contains(e.target)) {
+      quickMenu.classList.remove('open');
+      quickMenuTrigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      quickMenu.classList.remove('open');
+      quickMenuTrigger.setAttribute('aria-expanded', 'false');
     }
   });
 
