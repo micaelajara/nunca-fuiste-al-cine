@@ -2093,16 +2093,41 @@ Santiago del Estero Film Fest.</span>
 </footer>
 
 <div class="quick-menu" id="quickMenu">
-  <div class="quick-menu-list" id="quickMenuList">
-    <a href="index.html#equipo">Equipo</a>
-    <a href="columnas.html">Columnas</a>
-    <a href="entrevistas.html">Archivo de entrevistas</a>
-    <a href="merch.html">Merch</a>
-    <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-  </div>
-  <button class="quick-menu-trigger" id="quickMenuTrigger" type="button" aria-expanded="false" aria-controls="quickMenuList" aria-label="Accesos rápidos">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+  <button class="quick-menu-trigger" id="quickMenuTrigger" type="button" aria-expanded="false" aria-controls="quickMenuPanel" aria-label="Accesos rápidos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
   </button>
+  <div class="quick-menu-panel" id="quickMenuPanel">
+    <div class="quick-menu-panel-inner">
+      <div class="quick-menu-header">
+        <span class="quick-menu-title">Accesos rápidos</span>
+        <button class="quick-menu-close" id="quickMenuClose" type="button" aria-label="Cerrar accesos rápidos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="quick-menu-grid" id="quickMenuList">
+        <a href="index.html#equipo" class="quick-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Equipo</span>
+        </a>
+        <a href="columnas.html" class="quick-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Columnas</span>
+        </a>
+        <a href="entrevistas.html" class="quick-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          <span>Entrevistas</span>
+        </a>
+        <a href="merch.html" class="quick-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>Merch</span>
+        </a>
+        <a href="preguntas-frecuentes.html" class="quick-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg>
+          <span>Preguntas</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
@@ -2135,11 +2160,18 @@ Santiago del Estero Film Fest.</span>
 
   var quickMenu = document.getElementById('quickMenu');
   var quickMenuTrigger = document.getElementById('quickMenuTrigger');
+  var quickMenuClose = document.getElementById('quickMenuClose');
 
   quickMenuTrigger.addEventListener('click', function (e) {
     e.stopPropagation();
     var isOpen = quickMenu.classList.toggle('open');
     quickMenuTrigger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  quickMenuClose.addEventListener('click', function (e) {
+    e.stopPropagation();
+    quickMenu.classList.remove('open');
+    quickMenuTrigger.setAttribute('aria-expanded', 'false');
   });
 
   document.addEventListener('click', function (e) {
