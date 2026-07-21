@@ -507,9 +507,10 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  transition: opacity 0.15s;
+  transition: transform 0.2s ease;
 }
-.team-card:hover { opacity: 0.85; }
+.team-card:hover { transform: translateY(-4px); }
+.team-card:hover .team-name { color: var(--pink); }
 
 .team-photo,
 .team-photo-placeholder {
@@ -518,6 +519,11 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   border-radius: 12px;
   display: block;
+  transition: box-shadow 0.2s ease;
+}
+.team-card:hover .team-photo,
+.team-card:hover .team-photo-placeholder {
+  box-shadow: 0 0 0 3px var(--pink);
 }
 
 .team-photo-placeholder {
@@ -528,6 +534,7 @@ a { color: inherit; text-decoration: none; }
 .team-name {
   font-weight: 700;
   font-size: 1rem;
+  transition: color 0.15s ease;
 }
 
 .episode-embed {
