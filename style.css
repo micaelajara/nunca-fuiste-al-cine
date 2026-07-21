@@ -12,6 +12,12 @@
 
 * { box-sizing: border-box; }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 2px;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
