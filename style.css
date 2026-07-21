@@ -195,7 +195,7 @@
 .quick-menu.open .quick-menu-item:nth-child(3) { transition-delay: 0.22s; }
 .quick-menu.open .quick-menu-item:nth-child(4) { transition-delay: 0.25s; }
 .quick-menu.open .quick-menu-item:nth-child(5) { transition-delay: 0.28s; }
-.quick-menu-item:hover { background: var(--card); color: var(--ink); border-color: var(--ink-dim); transform: translateY(-2px); }
+.quick-menu-item:hover { background: var(--card); color: var(--pink); border-color: var(--pink); transform: translateY(-2px); }
 
 body {
   margin: 0;
