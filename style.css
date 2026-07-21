@@ -56,9 +56,30 @@
   transform: translateY(0);
 }
 .scroll-top-btn:hover { opacity: 0.9; }
-.scroll-top-btn svg {
+.scroll-top-icon {
   width: 22px;
   height: 22px;
+  position: relative;
+}
+.scroll-top-progress {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+.scroll-top-progress-track {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.15);
+  stroke-width: 3;
+}
+.scroll-top-progress-bar {
+  fill: none;
+  stroke: #0a0a0a;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
 }
 
 .quick-menu {
