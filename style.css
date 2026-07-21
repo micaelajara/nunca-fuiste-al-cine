@@ -383,9 +383,9 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-top-social-btn svg { width: 38px; height: 38px; }
 .hero-top-social-btn:hover { color: var(--ink); border-color: var(--ink-dim); }
-.hero-top-social-spotify:hover { color: #1db954; }
-.hero-top-social-youtube:hover { color: #ff0000; }
-.hero-top-social-instagram:hover { color: var(--pink); }
+.hero-top-social-spotify:hover { border-color: var(--blue); color: var(--blue); }
+.hero-top-social-youtube:hover { border-color: var(--pink); color: var(--pink); }
+.hero-top-social-instagram:hover { border-color: var(--yellow); color: var(--yellow); }
 
 .hero-cta {
   display: flex;
