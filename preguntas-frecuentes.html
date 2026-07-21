@@ -156,7 +156,11 @@
 </div>
 
 <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  <svg class="scroll-top-progress" viewBox="0 0 48 48" aria-hidden="true">
+    <circle class="scroll-top-progress-track" cx="24" cy="24" r="21" />
+    <circle id="scrollTopProgressBar" class="scroll-top-progress-bar" cx="24" cy="24" r="21" />
+  </svg>
+  <svg class="scroll-top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
 </button>
 
 <script>
@@ -228,10 +232,16 @@
   }
 
   var scrollTopBtn = document.getElementById('scrollTopBtn');
+  var scrollTopProgressBar = document.getElementById('scrollTopProgressBar');
+  var scrollTopProgressCircumference = 2 * Math.PI * 21;
+  scrollTopProgressBar.style.strokeDasharray = scrollTopProgressCircumference;
   var siteFooter = document.querySelector('.footer');
 
   function updateScrollTopBtn() {
     scrollTopBtn.classList.toggle('is-visible', window.scrollY > 500);
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = scrollable > 0 ? Math.min(Math.max(window.scrollY / scrollable, 0), 1) : 0;
+    scrollTopProgressBar.style.strokeDashoffset = scrollTopProgressCircumference * (1 - progress);
     var footerRect = siteFooter.getBoundingClientRect();
     var baseBottom = window.innerWidth <= 720 ? 72 : 24;
     var reservedSpace = scrollTopBtn.offsetHeight + baseBottom + 12;
