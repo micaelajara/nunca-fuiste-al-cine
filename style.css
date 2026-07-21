@@ -1254,7 +1254,12 @@ a { color: inherit; text-decoration: none; }
   height: 28px;
 }
 
-.footer-social-btn:hover { border-color: #000; color: #000; }
+.footer-social-btn:hover { color: var(--ink); border-color: var(--ink-dim); }
+.footer-social-instagram:hover { border-color: var(--yellow); color: var(--yellow); }
+.footer-social-spotify:hover { border-color: var(--blue); color: var(--blue); }
+.footer-social-youtube:hover { border-color: var(--pink); color: var(--pink); }
+.footer-social-twitter:hover { border-color: var(--yellow); color: var(--yellow); }
+.footer-social-tiktok:hover { border-color: var(--blue); color: var(--blue); }
 
 @media (max-width: 720px) {
   .scroll-top-btn {
