@@ -42,7 +42,7 @@
         <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
-    <a href="mailto:nuncafuistealcine@gmail.com" class="cta-small cta-outline">Contactanos</a>
+    <a href="#" id="contactLink" class="cta-small cta-outline">Contactanos</a>
     <a href="index.html#suscribite" class="cta-small">Suscribite</a>
   </nav>
 </header>
@@ -2290,6 +2290,13 @@ Santiago del Estero Film Fest.</span>
   });
 
   applyArchiveFilter();
+
+  var contactLink = document.getElementById('contactLink');
+  if (contactLink) {
+    var user = 'nuncafuistealcine';
+    var domain = 'gmail.com';
+    contactLink.href = 'mailto:' + user + '@' + domain;
+  }
 </script>
 
 </body>

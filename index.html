@@ -42,7 +42,7 @@
         <a href="https://www.youtube.com/@nuncafuistecine" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
-    <a href="mailto:nuncafuistealcine@gmail.com" class="cta-small cta-outline">Contactanos</a>
+    <a href="#" id="contactLink" class="cta-small cta-outline">Contactanos</a>
     <a href="#suscribite" class="cta-small">Suscribite</a>
   </nav>
 </header>
@@ -433,6 +433,13 @@
   scrollTopBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  var contactLink = document.getElementById('contactLink');
+  if (contactLink) {
+    var user = 'nuncafuistealcine';
+    var domain = 'gmail.com';
+    contactLink.href = 'mailto:' + user + '@' + domain;
+  }
 </script>
 
 </body>
