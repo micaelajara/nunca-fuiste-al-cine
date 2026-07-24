@@ -1,0 +1,40 @@
+name: Actualizar archivo de entrevistas desde Notion
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  update-entrevistas:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Buscar videos nuevos en YouTube y vincularlos en Notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: node scripts/update-youtube-links.js
+
+      - name: Sincronizar entrevistas.html con la base de Notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: node scripts/update-entrevistas.js
+
+      - name: Commitear cambios si hay
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add entrevistas.html
+            git commit -m "Actualiza el archivo de entrevistas desde Notion"
+            git push
+          else
+            echo "Sin cambios para commitear."
+          fi
